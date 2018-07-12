@@ -17,7 +17,7 @@ class collectd::plugin::write_network (
   $serverport = $servers[$servername]['serverport']
 
   class { '::collectd::plugin::network':
-    server     => $servername,
+    servers    => $servername,
     serverport => $serverport,
   }
 }
